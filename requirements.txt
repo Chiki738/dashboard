@@ -3,3 +3,4 @@ gunicorn
 supabase
 pandas
 plotly
+dash
