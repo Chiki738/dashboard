@@ -4,3 +4,4 @@ supabase
 pandas
 plotly
 dash
+setuptools
