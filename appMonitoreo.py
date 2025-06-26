@@ -8,7 +8,10 @@ from supabase import create_client, Client
 import plotly.graph_objects as go
 from functools import lru_cache 
 
-locale.setlocale(locale.LC_TIME, 'es_ES.UTF-8')
+try:
+    locale.setlocale(locale.LC_TIME, 'es_ES.UTF-8')
+except locale.Error:
+    locale.setlocale(locale.LC_TIME, '')
 hoy = pd.Timestamp.today()
 mes_anio_actual = hoy.strftime("%B %Y").capitalize()
 mes_anio_anterior = (hoy - pd.DateOffset(months=1)).strftime("%B %Y").capitalize()
